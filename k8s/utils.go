@@ -1,7 +1,7 @@
 package k8s
 
 import (
-	"github.com/marqub/resiproxy/log"
+	"github.com/sammyfaraj/resiproxy/log"
 	"k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/intstr"

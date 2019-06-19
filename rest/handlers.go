@@ -9,14 +9,14 @@ import (
 	"net/http/httputil"
 	"net/url"
 
-	"github.com/marqub/resiproxy/k8s"
-	"github.com/marqub/resiproxy/log"
+	"github.com/sammyfaraj/resiproxy/k8s"
+	"github.com/sammyfaraj/resiproxy/log"
 )
 
 type Proxy struct {
 	Name     string `json:"name"`
 	Listen   string `json:"listen"`
-	Upstream string `json:"upstream"`
+	Upstream string `json:"upstream"`			
 	Enabled  bool   `json:"enabled"`
 	Toxics   string `json:"-"`
 }
@@ -76,6 +76,7 @@ func returnError(code int, message string, w http.ResponseWriter) {
 func ProxyRequest(w http.ResponseWriter, r *http.Request) {
 	toxiproxyURL := url.URL{Scheme: k8s.Config.Scheme, Host: fmt.Sprintf("%s.%s:%d", k8s.Config.Name, k8s.Config.Namespace, k8s.Config.Port)}
 	log.Logger().Info("Proxy request to: ", toxiproxyURL.String())
+	log.Logger().Info("CONFIG NAME %s . CONFIG NAMESPACE %s . CONFIG PORT %s .",k8s.Config.Name,k8s.Config.Namespace,k8s.Config.Port)
 	serveReverseProxy(&toxiproxyURL, w, r)
 }
 

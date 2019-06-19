@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/kelseyhightower/envconfig"
-	"github.com/marqub/resiproxy/k8s"
-	"github.com/marqub/resiproxy/log"
-	"github.com/marqub/resiproxy/rest"
+	"github.com/sammyfaraj/resiproxy/k8s"
+	"github.com/sammyfaraj/resiproxy/log"
+	"github.com/sammyfaraj/resiproxy/rest"
 	"net/http"
 )
 

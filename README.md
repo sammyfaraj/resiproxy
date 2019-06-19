@@ -1,5 +1,5 @@
-[![CircleCI](https://circleci.com/gh/marqub/resiproxy/tree/master.svg?style=svg)](https://circleci.com/gh/marqub/broadcast/tree/master)
-[![codecov](https://codecov.io/gh/marqub/resiproxy/branch/master/graph/badge.svg)](https://codecov.io/gh/solcates/gobwa) 
+[![CircleCI](https://circleci.com/gh/sammyfaraj/resiproxy/tree/master.svg?style=svg)](https://circleci.com/gh/sammyfaraj/broadcast/tree/master)
+[![codecov](https://codecov.io/gh/sammyfaraj/resiproxy/branch/master/graph/badge.svg)](https://codecov.io/gh/solcates/gobwa) 
 # ResiProxy
 ### For more info about how to use ResiProxy, have a look at [this story on Medium](http://bit.ly/2EAXRYk)
 
@@ -58,7 +58,7 @@ resiproxy-resiproxy  1        1        1           0          0s
 
 ==> v1beta1/Ingress
 NAME                 HOSTS                 ADDRESS  PORTS  AGE
-resiproxy-resiproxy  resiproxy.marqub.com  80, 443  0s
+resiproxy-resiproxy  resiproxy.sammyfaraj.com  80, 443  0s
 
 ==> v1/Pod(related)
 NAME                                 READY  STATUS       RESTARTS  AGE
@@ -68,7 +68,7 @@ resiproxy-resiproxy-cfc4ccbff-6v9w5  0/3    Init:0/1     0         0s
 NAME                 DATA  AGE
 configmap-resiproxy  4     0s
 ```
-Use the ingress to access ResiProxy from outside the cluster `https://resiproxy.marqub.com`
+Use the ingress to access ResiProxy from outside the cluster `https://resiproxy.sammyfaraj.com`
 A sample request to create a proxy would be
 ```
 curl -X POST http://resiproxy.resiliency-testing.com/proxies \  

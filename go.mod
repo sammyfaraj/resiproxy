@@ -1,4 +1,4 @@
-module github.com/marqub/resiproxy
+module github.com/sammyfaraj/resiproxy
 
 require (
 	github.com/ghodss/yaml v1.0.0 // indirect

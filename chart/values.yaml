@@ -9,7 +9,6 @@ image:
     pullPolicy: Always
   resiproxy:
     repository: sammyfaraj/resiproxy
-    tag: dev
     pullPolicy: Always  
 service:
   toxiproxy:

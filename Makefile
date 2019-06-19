@@ -39,11 +39,11 @@ install:  deps
 
 ## Dev testing
 docker-build:
-		docker build -t sammyfaraj/resiproxy:dev .
+		docker build -t sammyfaraj/resiproxy .
 docker-run: docker-build
-		docker run -ti --rm sammyfaraj/resiproxy:dev
+		docker run -ti --rm sammyfaraj/resiproxy
 docker-push: docker-build
-		docker push sammyfaraj/resiproxy:dev
+		docker push sammyfaraj/resiproxy
 helm: docker-push
 		helm upgrade --install  resiproxy --namespace resiproxy --recreate-pods --wait --tiller-namespace=resiproxy chart
 delete:
